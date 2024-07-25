@@ -1,0 +1,87 @@
+*{
+padding : 0;
+margin : 0;
+box-sizing: border-box;
+user-select: none;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    padding: 20px;
+    border: 1px solid #000;
+    width: 800px;
+}
+.container h1{
+    text-align: center;
+    border-bottom: 1px solid #000;
+    padding-bottom: 20px;
+}
+.typeContent{
+    margin: 10px 0;
+    position: relative;
+}
+.typeContent input{
+    width: 100%;
+    height: 40px;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    padding-left: 4px;
+}
+.typeContent {
+    visibility: visible;
+}
+.typeContent p{
+    text-align: justify;
+    font-size: 1.3rem;
+}
+.details{
+    font-size: 1.5rem;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #0000ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+}
+.details button{
+    padding: 8px 15px;
+    font-size: 1.2rem ;
+    border-radius: 10px;
+}
+.details button:active{
+    background-color: brown;
+    color: #fff;
+    scale: .9;
+}
+.success{
+    background-color: green;
+    color: #fff;
+}
+.error{
+    background-color: red;
+    color: #fff;
+}
+.blink{
+    position: relative;
+}
+.blink::before{
+    position: absolute;
+    content: '';
+    width: 1.5px;
+    height: 100%;
+    background-color: #000000ef;
+    opacity: 0;
+    animation: blinked 1s linear infinite;
+    margin-left: .2px;
+}
+@keyframes blinked {
+    50%{
+        opacity: 1;
+    }
+}
